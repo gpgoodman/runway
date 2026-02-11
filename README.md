@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Runway
 
-## Getting Started
+Runway is a financial resilience simulator built for mid-career professionals navigating income volatility, market uncertainty, and long-term independence planning.
 
-First, run the development server:
+Most retirement calculators assume:
+- Steady employment
+- Predictable annual savings
+- Smooth market returns
+
+Runway models a more realistic path.
+
+---
+
+## Why I Built This
+
+At 51, working in software during rapid AI-driven industry change, I wanted to move beyond average-case retirement modeling.
+
+This project started as a personal financial planning spreadsheet and evolved into a web application designed to:
+
+- Model financial runway under conservative assumptions
+- Visualize long-term compounding
+- Explore the impact of varying savings rates
+- Eventually simulate employment gaps and income compression scenarios
+
+Runway treats income like burn rate and capital like runway.
+
+---
+
+## Current Features (v1)
+
+- Adjustable annual income
+- Adjustable annual savings contribution
+- Configurable rate of return
+- Configurable inflation rate
+- Long-term projection of invested capital growth
+- Visual representation of trajectory over time
+
+---
+
+## Planned Features
+
+- Employment gap modeling
+- Wage compression scenarios
+- Monte Carlo simulations
+- Sequence-of-returns stress testing
+- Withdrawal phase modeling
+- Multi-phase career modeling (active → partial → retired)
+
+---
+
+## Tech Stack
+
+- Next.js (App Router)
+- TypeScript
+- CSS Modules
+- Charting library (TBD)
+
+No Tailwind or UI framework — this project intentionally uses vanilla CSS for deeper layout and styling control.
+
+---
+
+## Architecture Approach
+
+Runway is structured in layers:
+
+1. **Financial Engine**
+    - Pure deterministic functions
+    - No framework dependencies
+    - Fully testable in isolation
+
+2. **State & Controls Layer**
+    - React-based input handling
+    - Memoized derived calculations
+
+3. **Visualization Layer**
+    - Data-driven chart rendering
+    - Responsive layout
+
+The goal is clarity, determinism, and explicit logic.
+
+---
+
+## Philosophy
+
+This is not fear-based planning.
+
+It is margin-based planning.
+
+The goal is not early retirement at all costs.
+The goal is optionality under uncertainty.
+
+---
+
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
