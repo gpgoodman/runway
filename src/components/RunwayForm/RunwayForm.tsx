@@ -38,7 +38,7 @@ const RunwayForm = ({
                 </div>
                 <div className={styles.runwayFormField}>
                     <label htmlFor="age">Retirement Age: </label>
-                    <input className={styles.runwayFormInput} id="age" type='number' value={retirementAge}
+                    <input className={styles.runwayFormInput} id="age" type='number' min="0" value={retirementAge}
                            onChange={(e) => setRetirementAge(Number(e.target.value))}/>
                 </div>
                 <div className={styles.runwayFormField}>
