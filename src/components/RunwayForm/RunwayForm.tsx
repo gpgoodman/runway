@@ -30,30 +30,30 @@ const RunwayForm = ({
 
     return (
         <div className={`bento-box`}>
-            <form>
-                <div>
+            <form className={styles.runwayForm}>
+                <div className={styles.runwayFormField}>
                     <label htmlFor="age">Starting Age: </label>
-                    <input id="age" type='number' value={age}
+                    <input className={styles.runwayFormInput} id="age" type='number' min="0" value={age}
                            onChange={(e) => setAge(Number(e.target.value))}/>
                 </div>
-                <div>
+                <div className={styles.runwayFormField}>
                     <label htmlFor="age">Retirement Age: </label>
-                    <input id="age" type='number' value={retirementAge}
+                    <input className={styles.runwayFormInput} id="age" type='number' value={retirementAge}
                            onChange={(e) => setRetirementAge(Number(e.target.value))}/>
                 </div>
-                <div>
+                <div className={styles.runwayFormField}>
                     <label htmlFor="assets">Starting Assets: </label>
-                    <input id="assets" type='number' value={assets}
+                    <input className={styles.runwayFormInput} id="assets" type='number' step="10000" min="0" value={assets}
                            onChange={(e) => setAssets(Number(e.target.value))}/>
                 </div>
-                <div>
+                <div className={styles.runwayFormField}>
                     <label htmlFor="realGrowth">Real Growth Rate: </label>
-                    <input id="realGrowth" type='number' value={realGrowthRate}
+                    <input className={styles.runwayFormInput} id="realGrowth" type='number' step=".01" min="0" value={realGrowthRate}
                            onChange={(e) => setRealGrowthRate(parseFloat(e.target.value))}/>
                 </div>
-                <div>
+                <div className={styles.runwayFormField}>
                     <label htmlFor="annualContribution">Annual Contribution: </label>
-                    <input id="annualContribution" type='number' value={annualContribution}
+                    <input className={styles.runwayFormInput} id="annualContribution" type='number' step="1000" min="0" value={annualContribution}
                            onChange={(e) => setAnnualContribution(Number(e.target.value))}/>
                 </div>
             </form>
