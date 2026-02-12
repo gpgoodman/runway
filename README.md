@@ -2,6 +2,11 @@
 
 Runway is a financial resilience simulator built for mid-career professionals navigating income volatility, market uncertainty, and long-term independence planning.
 
+View the current version here:
+[Runway Financial Planner](https://runway-planner.vercel.app/)
+
+*Note that Runway is a work in progress.*
+
 Most retirement calculators assume:
 - Steady employment
 - Predictable annual savings
