@@ -25,7 +25,9 @@ const RunwayForm = ({
                         realGrowthRate,
                         setRealGrowthRate,
                         annualContribution,
-                        setAnnualContribution
+                        setAnnualContribution,
+                        goal,
+                        setGoal
                     }: FormProps) => {
 
     return (
@@ -43,18 +45,26 @@ const RunwayForm = ({
                 </div>
                 <div className={styles.runwayFormField}>
                     <label htmlFor="assets">Starting Assets: </label>
-                    <input className={styles.runwayFormInput} id="assets" type='number' step="10000" min="0" value={assets}
+                    <input className={styles.runwayFormInput} id="assets" type='number' step="10000" min="0"
+                           value={assets}
                            onChange={(e) => setAssets(Number(e.target.value))}/>
                 </div>
                 <div className={styles.runwayFormField}>
                     <label htmlFor="realGrowth">Real Growth Rate: </label>
-                    <input className={styles.runwayFormInput} id="realGrowth" type='number' step=".01" min="0" value={realGrowthRate}
+                    <input className={styles.runwayFormInput} id="realGrowth" type='number' step=".01" min="0"
+                           value={realGrowthRate}
                            onChange={(e) => setRealGrowthRate(parseFloat(e.target.value))}/>
                 </div>
                 <div className={styles.runwayFormField}>
                     <label htmlFor="annualContribution">Annual Contribution: </label>
-                    <input className={styles.runwayFormInput} id="annualContribution" type='number' step="1000" min="0" value={annualContribution}
+                    <input className={styles.runwayFormInput} id="annualContribution" type='number' step="1000" min="0"
+                           value={annualContribution}
                            onChange={(e) => setAnnualContribution(Number(e.target.value))}/>
+                </div>
+                <div className={styles.runwayFormField}>
+                    <label htmlFor="annualContribution">Financial Independence: </label>
+                    <input className={styles.runwayFormInput} id="goal" type='number' step="25000" min="0" value={goal}
+                           onChange={(e) => setGoal(Number(e.target.value))}/>
                 </div>
             </form>
         </div>
