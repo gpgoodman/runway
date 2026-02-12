@@ -1,4 +1,34 @@
 
-.runwayTable {
+.runwayTableContainer {
     margin-top: 1rem;
+    width: 100%;
 }
+
+.runwayTable {
+    width: 100%;
+}
+
+.runwayTable tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.runwayTable tbody tr:hover {
+    background-color: #eef2f7;
+}
+.runwayTableHeaderTitle {
+    text-align: left;
+}
+
+.runwayTable tbody tr.runwayTableRowGoal {
+    background-color: #d8f0d8;
+}
+
+.runwayTable tbody tr.runwayTableRowGoalPastDue {
+    background-color: #f0dab2;
+}
+
+.runwayTable tbody tr.runwayTableRowRetired {
+    background-color: #c9e0f8;
+}
+
+
